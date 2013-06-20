@@ -1,0 +1,46 @@
+﻿@model IList<StoreFront.Domain.Entities.Product>
+@{
+    ViewBag.Title = "SOA Store";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+               
+            </p>
+        </div>
+    </section>
+}
+<h3>Products in our shop:</h3>
+<ol class="round">
+    @foreach (var product in Model)
+    {
+        <p data-id="@product.Id" class="product"> @product.Name
+            
+           
+        </p>
+        
+    }
+    <li >
+        
+    </li>
+
+</ol>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".product").append($("<a>Buy!</a>")).click(function() {
+            var id = $(this).data('id');
+            $.ajax({
+                type: "POST",
+                url: '/Home/AddToCart',
+                data: {id: id}
+            });
+        });
+    });
+
+</script>

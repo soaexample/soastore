@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreFront", "StoreFront\StoreFront.csproj", "{BC22AF6C-3D45-4D2C-92F9-C81545B9D491}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreFront.Domain", "StoreFront.Domain\StoreFront.Domain.csproj", "{F6C99FBA-C79C-45A2-8B55-01AED6362C72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTWarehouse", "RESTWarehouse\RESTWarehouse.csproj", "{AFCD4AC6-A564-4886-A534-D2C8DB3EBEE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC22AF6C-3D45-4D2C-92F9-C81545B9D491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC22AF6C-3D45-4D2C-92F9-C81545B9D491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC22AF6C-3D45-4D2C-92F9-C81545B9D491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC22AF6C-3D45-4D2C-92F9-C81545B9D491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C99FBA-C79C-45A2-8B55-01AED6362C72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C99FBA-C79C-45A2-8B55-01AED6362C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C99FBA-C79C-45A2-8B55-01AED6362C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C99FBA-C79C-45A2-8B55-01AED6362C72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFCD4AC6-A564-4886-A534-D2C8DB3EBEE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCD4AC6-A564-4886-A534-D2C8DB3EBEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFCD4AC6-A564-4886-A534-D2C8DB3EBEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFCD4AC6-A564-4886-A534-D2C8DB3EBEE2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
