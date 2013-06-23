@@ -5,7 +5,6 @@ using System.Web.Mvc;
 using System.Web.Security;
 using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
-using NHibernate;
 using WebMatrix.WebData;
 using StoreFront.Models;
 
@@ -14,13 +13,6 @@ namespace StoreFront.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        private readonly ISession session;
-
-        public AccountController(ISession session)
-        {
-            this.session = session;
-        }
-
         //
         // GET: /Account/Login
 
