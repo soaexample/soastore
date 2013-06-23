@@ -18,5 +18,10 @@ namespace RESTWarehouse.Controllers
         {
             return productService.GetProducts();
         }
+
+        public Product Get(int id)
+        {
+            return productService.GetProduct(id);
+        }
     }
 }

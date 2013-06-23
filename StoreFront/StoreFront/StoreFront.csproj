@@ -203,6 +203,7 @@
     <Compile Include="IoC\WindsorControllerFactory.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AuthenticationService.cs" />
     <Compile Include="Services\IProductService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -346,7 +347,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>63953</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:15127/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

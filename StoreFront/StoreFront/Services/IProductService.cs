@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using DotNetOpenAuth.OpenId.Extensions.AttributeExchange;
+﻿using System.Collections.Generic;
 using RestSharp;
 using StoreFront.Domain.Entities;
 
