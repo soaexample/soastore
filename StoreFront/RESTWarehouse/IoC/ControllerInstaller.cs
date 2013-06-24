@@ -20,7 +20,7 @@ namespace RESTWarehouse.IoC
                                 .LifestyleTransient());
             container.Register(Component.For<DocumentStore>().UsingFactoryMethod(x =>
                 {
-                    var documentStore = new EmbeddableDocumentStore { DataDirectory = "App_Data"};
+                    var documentStore = new DocumentStore { ConnectionStringName = "RavenDB", DefaultDatabase = "RESTWarehouse"};
                     documentStore.Initialize();
 
                     IndexCreation.CreateIndexes(Assembly.GetCallingAssembly(), documentStore);

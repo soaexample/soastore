@@ -14,7 +14,7 @@
     <RootNamespace>StoreFront</RootNamespace>
     <AssemblyName>StoreFront</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <MvcBuildViews>false</MvcBuildViews>
+    <MvcBuildViews>true</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -51,9 +51,9 @@
       <HintPath>..\packages\FluentMigrator.1.1.0.0\lib\40\FluentMigrator.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NHibernate.3.3.3.4000\lib\Net35\NHibernate.dll</HintPath>
+      <HintPath>..\RavenDBMembership\bin\Debug\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
     <Reference Include="Raven.Abstractions, Version=2.0.3.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -201,7 +201,9 @@
     <Compile Include="IoC\ControllerInstaller.cs" />
     <Compile Include="IoC\ServicesInstaller.cs" />
     <Compile Include="IoC\WindsorControllerFactory.cs" />
+    <Compile Include="IoC\WindsorServiceLocator.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\EditUserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthenticationService.cs" />
     <Compile Include="Services\IProductService.cs" />
@@ -303,13 +305,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
     <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -326,6 +325,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RavenDBMembership\RavenDBMembership.csproj">
+      <Project>{07cce5b6-9111-46dc-aaec-00d80e19fe4a}</Project>
+      <Name>RavenDBMembership</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StoreFront.Domain\StoreFront.Domain.csproj">
       <Project>{F6C99FBA-C79C-45A2-8B55-01AED6362C72}</Project>
       <Name>StoreFront.Domain</Name>

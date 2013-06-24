@@ -4,6 +4,8 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
+using Microsoft.Practices.ServiceLocation;
+using RavenDBMembership.Web.Infrastructure;
 using StoreFront.IoC;
 
 namespace StoreFront
@@ -21,21 +23,20 @@ namespace StoreFront
             Container.Install(FromAssembly.Named("StoreFront.Domain"));
             var controllerFactory = new WindsorControllerFactory(Container.Kernel);
             ControllerBuilder.Current.SetControllerFactory(controllerFactory);
+            ServiceLocator.SetLocatorProvider(() => new WindsorServiceLocator(Container));
         }
 
 
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+            BootstrapContainer();
 
+            AreaRegistration.RegisterAllAreas();
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
-            BootstrapContainer();
-
-        
         }
 
         

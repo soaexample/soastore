@@ -17,9 +17,9 @@ namespace StoreFront.IoC
             container.Register(Classes.FromThisAssembly()
                                 .BasedOn<IController>()
                                 .LifestyleTransient());
-            container.Register(Component.For<DocumentStore>().UsingFactoryMethod(x =>
+            container.Register(Component.For<IDocumentStore>().Forward<DocumentStore>().UsingFactoryMethod(x =>
                 {
-                    var documentStore = new EmbeddableDocumentStore { DataDirectory = "App_Data"};
+                    var documentStore = new DocumentStore { ConnectionStringName = "RavenDB", DefaultDatabase = "SoaStore"};
                     documentStore.Initialize();
 
                     IndexCreation.CreateIndexes(Assembly.GetCallingAssembly(), documentStore);

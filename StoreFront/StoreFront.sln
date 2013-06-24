@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C44C46
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RavenDBMembership", "RavenDBMembership\RavenDBMembership.csproj", "{07CCE5B6-9111-46DC-AAEC-00D80E19FE4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{AFCD4AC6-A564-4886-A534-D2C8DB3EBEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFCD4AC6-A564-4886-A534-D2C8DB3EBEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFCD4AC6-A564-4886-A534-D2C8DB3EBEE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07CCE5B6-9111-46DC-AAEC-00D80E19FE4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07CCE5B6-9111-46DC-AAEC-00D80E19FE4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07CCE5B6-9111-46DC-AAEC-00D80E19FE4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07CCE5B6-9111-46DC-AAEC-00D80E19FE4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
