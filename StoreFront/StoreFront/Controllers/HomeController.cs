@@ -36,7 +36,11 @@ namespace StoreFront.Controllers
         [HttpPost]
         public ActionResult AddToCart(int id)
         {
-
+            var product = productService.GetProductById(id);
+            
+            //add to cart
+            Cart.Instance.AddToCart(product,1);
+            
             return new HttpStatusCodeResult(200);
         }
     }

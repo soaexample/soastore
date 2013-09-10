@@ -14,9 +14,16 @@ namespace RESTWarehouse.Controllers
             this.productService = productService;
         }
 
+        [HttpGet]
         public IList<Product> Get()
         {
             return productService.GetProducts();
+        }
+
+        [HttpGet]
+        public Product GetProductById(int id)
+        {
+            return productService.GetProduct(id);
         }
     }
 }

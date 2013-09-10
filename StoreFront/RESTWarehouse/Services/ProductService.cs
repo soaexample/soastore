@@ -19,10 +19,16 @@ namespace RESTWarehouse.Services
             var products = session.Query<Product>().ToList();
             return products;
         }
+
+        public Product GetProduct(int id)
+        {
+            return session.Load<Product>(id);
+        }
     }
 
     public interface IProductService
     {
         IList<Product> GetProducts();
+        Product GetProduct(int id);
     }
 }

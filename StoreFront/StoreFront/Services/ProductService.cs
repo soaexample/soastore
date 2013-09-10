@@ -7,29 +7,40 @@ namespace StoreFront.Services
     public interface IProductService
     {
         IList<Product> GetProducts();
+        Product GetProductById(int id);
     }
 
     public class ProductService : IProductService
     {
-        public IList<Product> GetProducts()
+        private RestClient GetClient()
         {
             var client = new RestClient("http://localhost:4874");
-            // client.Authenticator = new HttpBasicAuthenticator(username, password);
+            //necessary initialization
+
+            return client;
+        }
+        public IList<Product> GetProducts()
+        {
+            var client = GetClient();
 
             var request = new RestRequest("api/Products/Get", Method.GET);
-          //  request.AddParameter("name", "value"); // adds to POST or URL querystring based on Method
-          //  request.AddUrlSegment("id", 123); // replaces matching token in request.Resource
-
-            // easily add HTTP Headers
-       //     request.AddHeader("header", "value");
-
-         
-            // execute the request
              
             IRestResponse<List<Product>> response = client.Execute<List<Product>>(request);
 
             return response.Data;
+        }
 
+        public Product GetProductById(int id)
+        {
+            var client = GetClient();
+
+            var request = new RestRequest("api/Products/GetProductById", Method.GET);
+            request.AddParameter("id", id); 
+       
+
+            IRestResponse<Product> response = client.Execute<Product>(request);
+
+            return response.Data;
         }
     }
 }
