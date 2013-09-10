@@ -43,5 +43,10 @@ namespace StoreFront.Controllers
             
             return new HttpStatusCodeResult(200);
         }
+
+        public ActionResult ShowCart()
+        {
+            return View(Cart.Instance.Products);
+        }
     }
 }
