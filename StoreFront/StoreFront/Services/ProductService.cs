@@ -14,7 +14,7 @@ namespace StoreFront.Services
     {
         private RestClient GetClient()
         {
-            var client = new RestClient("http://localhost:4874");
+            var client = new RestClient("http://localhost:8001");
             //necessary initialization
 
             return client;
