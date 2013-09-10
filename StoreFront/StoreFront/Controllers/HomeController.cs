@@ -36,6 +36,7 @@ namespace StoreFront.Controllers
         [HttpPost]
         public ActionResult AddToCart(int id)
         {
+
             return new HttpStatusCodeResult(200);
         }
     }
