@@ -1,0 +1,6 @@
+pl\edu\agh\eaiib\entities\Order.class
+pl\edu\agh\eaiib\ws\OrderListenerImpl.class
+pl\edu\agh\eaiib\ws\OrderListener.class
+pl\edu\agh\eaiib\OrdersController.class
+pl\edu\agh\eaiib\entities\OrderEntity.class
+pl\edu\agh\eaiib\entities\OrdersBean.class

@@ -1,0 +1,62 @@
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:underline;}
+a:active {text-decoration:underline;}
+
+.order-table{   
+	border-collapse:collapse;
+	padding:2px;
+}
+ 
+.order-table-header{
+	text-align:center;
+	background:none repeat scroll 0 0 #E5E5E5;
+	border:1px solid #BBBBBB;
+	padding:16px;
+}
+ 
+.order-table-odd-row{
+	text-align:leftr;
+	background:none repeat scroll 0 0 #F2F2F2;
+	border:1px solid #BBBBBB;
+}
+ 
+.order-table-even-row{
+	text-align:left;
+	background:none repeat scroll 0 0 #F9F9F9;
+	border:1px solid #BBBBBB;
+}
+
+.order-table-no{
+	text-align:center;
+	border-right:1px solid #BBBBBB;
+}
+
+.order-table-details{
+	text-align:center;
+	border-right:1px solid #BBBBBB;
+}
+
+.order-table-address{
+	text-align:center;
+	border-right:1px solid #BBBBBB;
+}
+
+.order-table-actions{
+	text-align:center;
+	border-right:1px solid #BBBBBB;
+}
+
+.order-table-products{
+	text-align:center;
+	padding:2px;
+	width:100%;
+}
+
+.order-table-product{
+	text-align:left;
+}
+
+.order-table-quantity{
+	text-align:right;
+}

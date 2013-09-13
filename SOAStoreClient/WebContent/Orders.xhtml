@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Orders</title>
+	<h:outputStylesheet name="style.css" />
+	<h:outputScript name="jquery.js" />
+	<h:outputScript name="reload.js" />
+</h:head>
+<h:body>
+	<h3>Orders</h3>
+	<h:form>
+		<h:dataTable value="#{ordersBean.orders}" var="o"
+			styleClass="order-table" headerClass="order-table-header"
+			rowClasses="order-table-odd-row,order-table-even-row"
+			columnClasses="order-table-no,order-table-details,order-table-address,order-table-actions">
+			<h:column>
+				<f:facet name="header">Order no.</f:facet>#{o.id}
+		</h:column>
+			<h:column>
+				<f:facet name="header">Order details</f:facet>
+				<h:dataTable value="#{o.entities}" var="e"
+					styleClass="order-table-products"
+					columnClasses="order-table-product,order-table-quantity">
+					<h:column>
+						<h:outputText value="#{e.product}" />
+					</h:column>
+					<h:column>
+						<h:outputText value="#{e.quantity}" />
+					</h:column>
+				</h:dataTable>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Address</f:facet>#{o.address}
+		</h:column>
+			<h:column>
+				<f:facet name="header">Actions</f:facet>
+				<h:commandLink action="#{ordersBean.removeOrder(o)}" value="Executed" />
+			</h:column>
+		</h:dataTable>
+	</h:form>
+</h:body>
+</html>
